@@ -22,7 +22,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: xhofe/alist
+          images: henryzzzzzz/alist
           tags: |
             type=schedule
             type=ref,event=branch
@@ -34,7 +34,7 @@ jobs:
         id: meta-ffmpeg
         uses: docker/metadata-action@v5
         with:
-          images: xhofe/alist
+          images: henryzzzzzz/alist
           flavor: |
             suffix=-ffmpeg
           tags: |
@@ -72,7 +72,7 @@ jobs:
         if: github.event_name == 'push'
         uses: docker/login-action@v3
         with:
-          username: xhofe
+          username: henryzzzzzz
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
